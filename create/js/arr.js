@@ -1,9 +1,49 @@
-const arr = [
-    oneLayer[
-        gfdgd,
-        hdh,
-        hd,
-    ],
-
+const arrCakes = [
+    {
+    flavor:"",
+    priceLarge:"",
+    priceMedium:"",
+    priceSmall:"",
+    imgLarge:"",
+    imgMedium:"",
+    imgSmall:"",
+},
+{
+    flavor:"",
+    priceLarge:"",
+    priceMedium:"",
+    priceSmall:"",
+    imgLarge:"",
+    imgMedium:"",
+    imgSmall:"",
+},
+{
+    flavor:"",
+    priceLarge:"",
+    priceMedium:"",
+    priceSmall:"",
+    imgLarge:"",
+    imgMedium:"",
+    imgSmall:"",
+},
+{
+    flavor:"",
+    priceLarge:"",
+    priceMedium:"",
+    priceSmall:"",
+    imgLarge:"",
+    imgMedium:"",
+    imgSmall:"",
+},
+{
+    flavor:"",
+    priceLarge:"",
+    priceMedium:"",
+    priceSmall:"",
+    imgLarge:"",
+    imgMedium:"",
+    imgSmall:"",
+},
 ]
-export {arr}
+
+export {arrCakes}
