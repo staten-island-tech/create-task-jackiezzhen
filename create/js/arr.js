@@ -1,21 +1,7 @@
 const cakeArr = [
   {
     flavor: "Choco Cloud",
-    large: {
-      priceLarge: "",
-      imgLarge: "",
-      imgLayerLarge: "",
-    },
-    medium: {
-      priceMedium: "",
-      imgMedium: "",
-      imgLayerMedium: "",
-    },
-    small: {
-      priceSmall: "",
-      imgSmall: "",
-      imgLayerSmall: "",
-    },
+    img: "",
     ingredients: ["Cloud cream[heavy cream(milk), whipping cream, sugar]", 
     "Choco cake sheet(liquid egg, sugar, wheat flour, butter, dark cocoa powder, dough improver, baking powder, sea salt)", 
     "Semisweet chocolate", 
@@ -26,21 +12,7 @@ const cakeArr = [
   },
   {
     flavor: "Mocha Cloud",
-    large: {
-      priceLarge: "",
-      imgLarge: "",
-      imgLayerLarge: "",
-    },
-    medium: {
-      priceMedium: "",
-      imgMedium: "",
-      imgLayerMedium: "",
-    },
-    small: {
-      priceSmall: "",
-      imgSmall: "",
-      imgLayerSmall: "",
-    },
+    img: "",
     ingredients: ["Mocha cloud cream[heavy cream(milk), coffee extract, whipped cream, sugar]",
     "Mocha cake sheet(liquid egg, sugar, wheat flour, butter, emulsifying agent, coffee extract, baking powder, sea salt)",
     "Strawberry", 
@@ -54,21 +26,7 @@ const cakeArr = [
   },
   {
     flavor: "Green Tea Cloud",
-    large: {
-      priceLarge: "",
-      imgLarge: "",
-      imgLayerLarge: "",
-    },
-    medium: {
-      priceMedium: "",
-      imgMedium: "",
-      imgLayerMedium: "",
-    },
-    small: {
-      priceSmall: "",
-      imgSmall: "",
-      imgLayerSmall: "",
-    },
+    img: "",
     ingredients: ["Green tea cake sheet(liquid egg, sugar, wheat flour, butter, green tea powder, emulsifying agent, baking powder, sea salt, food color)", 
     "Cloud cream[heavy cream(milk), whipping cream, sugar]", 
     "Strawberry", 
@@ -82,21 +40,7 @@ const cakeArr = [
   },
   {
     flavor: "Strawberry Cloud",
-    large: {
-      priceLarge: "",
-      imgLarge: "",
-      imgLayerLarge: "",
-    },
-    medium: {
-      priceMedium: "",
-      imgMedium: "",
-      imgLayerMedium: "",
-    },
-    small: {
-      priceSmall: "",
-      imgSmall: "",
-      imgLayerSmall: "",
-    },
+    img: "",
     ingredients: ["Strawberry cloud cream(heavy cream, whipping cream, sugar, strawberry syrup)", 
     "Strawberry cake sheet[liquid egg, sugar, wheat flour, butter, strawberry syrup, strawberry powder, emulsifying agent, baking powder, sea salt, food coloring(pink)]", 
     "Strawberry", "Simple syrup (water, sugar, lemon)", 
@@ -107,21 +51,7 @@ const cakeArr = [
   },
   {
     flavor: "",
-    large: {
-      priceLarge: "",
-      imgLarge: "",
-      imgLayerLarge: "",
-    },
-    medium: {
-      priceMedium: "",
-      imgMedium: "",
-      imgLayerMedium: "",
-    },
-    small: {
-      priceSmall: "",
-      imgSmall: "",
-      imgLayerSmall: "",
-    },
+    img: "",
     ingredients: [],
   },
 

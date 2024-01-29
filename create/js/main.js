@@ -1,36 +1,20 @@
-import { arrCakes } from "./arr.js";
+import { cakeArr } from "./arr.js";
 const DOMSelectors = {
-  optionSizes: document.querySelectorAll(),
-  optionLarge: document.querySelector("button.optionLarge"),
-  optionMedium: document.querySelector("button.optionMedium"),
-  optionSmall: document.querySelector("button.optionSmall"),
-  stack: document.querySelector(".stackContainer"),
+  layers: document.querySelector(".cakeContainer"),
   form: document.querySelector(".form"),
 };
+DOMSelectors.form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  generateLayers();
+});
 
-function selectSize() {
-  DOMSelectors.form.addEventListener("submit", function(event){
-    const sizeHTML = `<h1>Please Select A Cake Size</h1>
-    <button class="optionLarge"><img class=largeButton src="" alt="Large Cake"></button>
-    <button class="optionMedium"><img class=mediumButton src="" alt="Medium Cake"></button>
-    <button class="optionSmall"><img class=smallButton src="" alt="Small Cake"></button>`;
-    DOMSelectors.stack.insertAdjacentHTML("beforeend", sizeHTML);
-  });
-
-}
-
-function chooseLayers() {
-  function optionLarge(){
-
-  }
-  function optionMedium(){
-
-  }
-  function optionSmall(){
-
+function generateLayers() {
+  const numberOfLayers = document.getElementById("quantity").value;
+  DOMSelectors.layers.innerHTML = "";
+  for (let i = 0; i < numberOfLayers; i++) {
+    DOMSelectors.layers.innerHTML += `<img src="public/template.png" alt="Layer ${i + 1}" class="templateImg">`;
   }
 }
-function generateLayers() {}
 
 
 function cakeInfo(){
