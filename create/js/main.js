@@ -1,15 +1,15 @@
 import { cakeArr } from "./arr.js";
 const DOMSelectors = {
   layers: document.querySelector(".cakeContainer"),
+  info: document.querySelector(".infoContainer"),
   form: document.querySelector(".form"),
 };
 
 DOMSelectors.form.addEventListener("submit", function(event) {
   event.preventDefault();
-  cakeInfo()
+  cakeInfo();
   generateLayers();
 });
-
 
 function generateLayers() {
   const layerQuantity = document.getElementById("quantity").value;
@@ -28,7 +28,6 @@ function generateLayers() {
     `;
     imgButton(flavorNum);
   }
-  
 }
 
 function imgButton(flavorNum) {
@@ -63,5 +62,8 @@ function imgButton(flavorNum) {
 }
 
 function cakeInfo(){
-
+  const cakeHTML =  `
+    <img src=${link.img} alt="Cake" class="cakeImg"></img>
+    `;
+  cakeArr.forEach((img) => img.insertAdjacentHTML("beforeend", cakeHTML)); 
 }
