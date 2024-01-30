@@ -1,7 +1,7 @@
 const cakeArr = [
   {
     flavor: "Choco Cloud",
-    img: "",
+    img: "public/choco_cloud.png",
     ingredients: ["Cloud cream[heavy cream(milk), whipping cream, sugar]", 
     "Choco cake sheet(liquid egg, sugar, wheat flour, butter, dark cocoa powder, dough improver, baking powder, sea salt)", 
     "Semisweet chocolate", 
@@ -12,7 +12,7 @@ const cakeArr = [
   },
   {
     flavor: "Mocha Cloud",
-    img: "",
+    img: "public/mocha_cloud.png",
     ingredients: ["Mocha cloud cream[heavy cream(milk), coffee extract, whipped cream, sugar]",
     "Mocha cake sheet(liquid egg, sugar, wheat flour, butter, emulsifying agent, coffee extract, baking powder, sea salt)",
     "Strawberry", 
@@ -26,7 +26,7 @@ const cakeArr = [
   },
   {
     flavor: "Green Tea Cloud",
-    img: "",
+    img: "public/green_tea_cloud.png",
     ingredients: ["Green tea cake sheet(liquid egg, sugar, wheat flour, butter, green tea powder, emulsifying agent, baking powder, sea salt, food color)", 
     "Cloud cream[heavy cream(milk), whipping cream, sugar]", 
     "Strawberry", 
@@ -40,7 +40,7 @@ const cakeArr = [
   },
   {
     flavor: "Strawberry Cloud",
-    img: "",
+    img: "public/strawberry_cloud.png",
     ingredients: ["Strawberry cloud cream(heavy cream, whipping cream, sugar, strawberry syrup)", 
     "Strawberry cake sheet[liquid egg, sugar, wheat flour, butter, strawberry syrup, strawberry powder, emulsifying agent, baking powder, sea salt, food coloring(pink)]", 
     "Strawberry", "Simple syrup (water, sugar, lemon)", 
@@ -50,10 +50,34 @@ const cakeArr = [
     "Glaze"],
   },
   {
+    flavor: "Mango Cloud",
+    img: "public/mango_cloud.png",
+    ingredients: ["Mango cream[heavy cream(milk), mango puree, whipped cream, sugar, mango compound]", 
+    "White cake sheet(whole egg, wheat flour, sugar, egg white, milk, corn syrup, shortening, margarine, emulsifying agent, corn starch, baking powder, salt, citric acid, xanthan gum)", 
+    "Mango", 
+    "Blueberry", 
+    "Cloud cream[heavy cream(milk), whipped cream, sugar]", 
+    "Simple syrup(water, sugar, lemon juice)", 
+    "Glaze"],
+  },
+  {
+    flavor: "Red Velvet",
+    img: "public/red_velvet.png",
+    ingredients: ["Strawberry butter cream(butter, margarine, sugar, water, strawberry flavor paste, corn syrup)", 
+    "Red velvet cake sheet(red velvet cake mix, water, egg white, corn oil, sugar)", 
+    "White cake sheet(liquid egg, sugar, wheat flour, butter, dough improver, baking powder, sea salt)", 
+    "Raspberry jam mix(raspberry jam, water, sugar, lemon juice)", 
+    "Coconut fine shred", 
+    "Chocolate decoration(milk)", 
+    "Chocolate decoration(white)", 
+    "Cake syrup(water, sugar, lemon juice)", 
+    "Chocolate decoration(white)"],
+  },
+  /* {
     flavor: "",
     img: "",
     ingredients: [],
-  },
+  }, */
 
 ];
 export { cakeArr };

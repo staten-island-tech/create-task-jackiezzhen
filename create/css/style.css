@@ -1,8 +1,8 @@
-  :root {
+  body, html {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
-
+    background-image: url(https://themuralstore.com/var/images/product/550.450/2686-22017.jpg);
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -15,22 +15,37 @@
     flex-direction: column-reverse;
   }
 
-  .templateImg {
-    margin-bottom: -2rem;
+  .layer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    place-items: center;
+  }
+
+  .cakeImg {
+    margin-bottom: -2.3rem;
     max-width: 300px;
     background-color: transparent;
   }
+
+  .previous,
+  .next {
+    margin: 1rem 1rem 0 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
   button {
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 0.6em 1.2em;
     font-size: 1em;
     font-weight: 500;
     font-family: inherit;
-    background-color: #1a1a1a;
     cursor: pointer;
+    border-color: #213547;
     transition: border-color 0.25s;
   }
+
   button:hover {
     border-color: #646cff;
   }
