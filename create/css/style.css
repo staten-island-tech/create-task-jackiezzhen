@@ -1,4 +1,4 @@
-  body, html {
+  html {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
@@ -7,12 +7,36 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
+  h6{
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .layerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .inputBox {
+    background-color: azure;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 1%;
+    justify-content: center;
+    padding: 1%;
+    border: 1px solid #213547;
+    z-index: 102;
+  }
 
   .cakeContainer {
+    left: 1%;
     margin: 2rem 0 0 2rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
+    position: relative;
   }
 
   .layer {
@@ -24,18 +48,58 @@
 
   .cakeImg {
     margin-bottom: -2.3rem;
-    max-width: 300px;
+    max-width: 18rem;
     background-color: transparent;
   }
 
   .previous,
   .next {
+    background: transparent;
+    border: none;
+  }
+  .flavorButtons {
     margin: 1rem 1rem 0 1rem;
     width: 3rem;
     height: 3rem;
   }
 
-  button {
+  .infoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    z-index: 101;
+  }
+
+   .infoImg{
+     margin: 0rem;
+     width: 40%;
+   }
+
+   .cakeInfoContainer {
+    position: relative;
+    margin: -1.32rem;
+  }
+  
+  .info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 40%;
+    width: 25rem;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  img.infoImg:hover + .info {
+    display: inline-block;
+    position: absolute;
+  }
+
+  input, button {
     border-radius: 8px;
     border: 1px solid transparent;
     font-size: 1em;
@@ -43,26 +107,33 @@
     font-family: inherit;
     cursor: pointer;
     border-color: #213547;
-    transition: border-color 0.25s;
   }
 
-  button:hover {
-    border-color: #646cff;
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
-
-  @media (prefers-color-scheme: light) {
-    :root {
-      color: #213547;
-      background-color: #ffffff;
+  @media (max-width: 1056px) {
+    .infoContainer {
+      margin-top: 5rem;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      width: auto ;
+      position: relative;
+      top: 20%;
+      left: 3rem;
+      z-index: 101;
     }
-    a:hover {
-      color: #747bff;
+  
+    .infoImg {
+      margin: 0rem;
+      width: 10rem;
     }
-    button {
-      background-color: #f9f9f9;
+    .info{
+      left: 10rem;
+      width: 22rem;
+    }
+    .cakeContainer {
+      margin: 2rem auto;
+    }
+    .layer{
+      width: auto;
     }
   }

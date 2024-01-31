@@ -3,41 +3,46 @@ const DOMSelectors = {
   layers: document.querySelector(".cakeContainer"),
   info: document.querySelector(".infoContainer"),
   form: document.querySelector(".form"),
+  reset: document.querySelector(".resetButton"),
+  input : document.querySelector(".inputBox")
 };
 
-DOMSelectors.form.addEventListener("submit", function(event) {
+DOMSelectors.reset.addEventListener("click", function () {
+  location.reload();
+});
+DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
-  cakeInfo();
   generateLayers();
 });
 
 function generateLayers() {
-  const layerQuantity = document.getElementById("quantity").value;
   DOMSelectors.layers.innerHTML = "";
   
+  const layerQuantity = document.getElementById("quantity").value;
   for (let i = 0; i < layerQuantity; i++) {
-    const flavorNumValue = { value: 0 };
-    const flavorNum = flavorNumValue.value;
     DOMSelectors.layers.innerHTML += `
-    <div class= layer>
-    <button class=previous>Back</button>
+    <div class=layer>
+    <button class=previous><img src="public/left_arrow.png" alt=Previous class=flavorButtons></button>
     <img src="public/template.png" alt="Layer ${i + 1}" class="cakeImg">
-    <button class=next>Next</button>
+    <button class=next><img src="public/right_arrow.png" alt=Next class=flavorButtons></button>
     </div>
     <style>.cakeImg{z-index: ${i}</style>
     `;
-    imgButton(flavorNum);
+
+    cakeInfo();
+    build();
+    imgButton();
   }
 }
 
-function imgButton(flavorNum) {
+function imgButton() {
   const previousButtons = document.querySelectorAll(".previous");
   const nextButtons = document.querySelectorAll(".next");
-
+  let flavorNum = 0;
   nextButtons.forEach((next) => {
     next.addEventListener("click", function () {
       const layerDiv = next.closest(".layer");
-      const cakeImage = layerDiv.querySelector('.cakeImg');
+      const cakeImage = layerDiv.querySelector(".cakeImg");
       flavorNum++;
       if (flavorNum >= cakeArr.length) {
         flavorNum = 0;
@@ -49,21 +54,54 @@ function imgButton(flavorNum) {
   previousButtons.forEach((previous) => {
     previous.addEventListener("click", function () {
       const layerDiv = previous.closest(".layer");
-      const cakeImage = layerDiv.querySelector('.cakeImg');
+      const cakeImage = layerDiv.querySelector(".cakeImg");
       flavorNum--;
-      console.log(cakeArr.length);
       if (flavorNum < 0) {
         flavorNum = cakeArr.length - 1;
-        
       }
       cakeImage.src = cakeArr[flavorNum].img;
     });
   });
 }
 
-function cakeInfo(){
-  const cakeHTML =  `
-    <img src=${link.img} alt="Cake" class="cakeImg"></img>
+function build() {
+  if (!document.querySelector(".buildButton")) {
+  DOMSelectors.input.insertAdjacentHTML("beforeend",
+    `
+    <div class=buildDiv>
+    <button class="buildButton">Build</button>
+    </div>
+    `
+  );
+
+  const buildButton = document.querySelector(".buildButton");
+  buildButton.addEventListener("click", function () {
+    const previousButtons = document.querySelectorAll(".previous");
+    const nextButtons = document.querySelectorAll(".next");
+    const cakeImg = document.querySelectorAll(".cakeImg");
+
+    previousButtons.forEach((button) => button.remove());
+    nextButtons.forEach((button) => button.remove());
+
+    cakeImg.forEach((img) => {
+      img.style.marginBottom = "-4.3rem";
+    });
+  });
+}
+}
+
+function cakeInfo() {
+  DOMSelectors.info.innerHTML = "";
+  cakeArr.forEach((cake) => {
+    const cakeHTML = `
+      <div class="cakeInfoContainer">
+        <img src="${cake.img}" alt="${cake.flavor}" class="infoImg">
+        <div class="info">
+          <h6 class="infoFlavor">${cake.flavor}</h6>
+          <p class="ingredients">${cake.ingredients}</p>
+        </div>
+      </div>
     `;
-  cakeArr.forEach((img) => img.insertAdjacentHTML("beforeend", cakeHTML)); 
+    DOMSelectors.info.insertAdjacentHTML("beforeend", cakeHTML);
+  });
 }

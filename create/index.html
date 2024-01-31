@@ -7,15 +7,18 @@
     <title>bobthebuilder</title>
   </head>
   <body>
-    <div class=optionButton>
+    <div class=layerButton>
+      <div class="inputBox">
       <form action="form" class="form">        
         <label for="quantity">Designate the Number of Layers</label>
-        <input type="number" id="quantity" name="layer" min="1" max="100" step="1">
+        <input type="number" id="quantity" name="layer" min="1" max="100" step="1" required>
         <input type="submit" value="Enter" id="submit" />
       </form>
+      <button class="resetButton">Reset</button>
     </div>
-    <div class="cakeContainer"></div>
+    </div>
     <div class="infoContainer"></div>
+    <div class="cakeContainer"></div>
     <script type="module" src="js/arr.js"></script>
     <script type="module" src="js/main.js"></script>
   </body>
