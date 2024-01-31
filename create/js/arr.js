@@ -73,11 +73,5 @@ const cakeArr = [
     "Cake syrup(water, sugar, lemon juice)", 
     "Chocolate decoration(white)"],
   },
-  /* {
-    flavor: "",
-    img: "",
-    ingredients: [],
-  }, */
-
 ];
 export { cakeArr };
